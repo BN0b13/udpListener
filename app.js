@@ -10,6 +10,7 @@ AWS.config.update({region: 'us-east-2'});
 const sqs = new AWS.SQS({apiVersion: '2012-11-05'});
 const queueURL = 'https://sqs.us-east-2.amazonaws.com/350359568306/udpListenerSQS.fifo';
 
+
 server.on('error', (err) => {
   console.log(`server error: \n${err.stack}`);
   server.close();
